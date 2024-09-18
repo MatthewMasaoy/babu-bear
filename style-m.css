@@ -1,0 +1,259 @@
+/* Global reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+    font-size: bold;
+}
+/* Style for the top image */
+.top-image {
+    text-align: center; /* Center the image horizontally */
+    margin-bottom: 20px; /* Space between the image and the text box */
+}
+
+.top-image img {
+    margin-top: 10px;
+    width: 70%; /* Adjust width as needed */
+    max-width: 600px; /* Maximum width to prevent it from being too large */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Optional: rounded corners */
+     /* Optional: shadow effect */
+     
+}
+
+
+body {
+    background-image: url(bg1.jpg);
+    margin: 0;
+    background-size: cover;
+}
+/* Style for the Home button */
+.home-img {
+    width: 50px; /* Adjust size as needed */
+    height: auto;
+    display: block;
+    margin: 10px auto; /* Center it horizontally */
+}
+
+/* Optional: You can make sure the Home button has the same hover effect as the text links */
+nav ul li a img:hover {
+    transform: scale(1.1); /* Scale effect on hover */
+}
+
+/* Center image styles */
+.center-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10; /* Make sure it's above the background but below the header */
+}
+
+.center-img {
+    width: 300px; /* Adjust the size of the center image */
+    height: auto;
+}
+
+/* Header styles */
+header {
+    width: 100%;
+    background-image: url(em.jpg);
+    background-color: brown;
+    color: brown;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    color: brown;
+}
+
+.logo-img {
+    width: 160px; /* Adjust the size of the logo */
+    height: auto;
+}
+
+/* Burger Menu (Hidden on large screens) */
+.menu-icon {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 25px;
+    cursor: pointer;
+}
+
+.menu-icon .bar {
+    width: 100%;
+    height: 4px;
+    background-color: white;
+    border-radius: 2px;
+}
+
+/* Sidebar (Navbar) styles */
+.navbar {
+    background-image: url(brown.jpg);
+    background-color: brown;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    right: -100%; /* Initially hidden off the right side */
+    height: 100%;
+    width: 75%;
+    max-width: 300px;
+    transition: right 0.3s ease-in-out;
+    z-index: 999;
+    padding: 30px;
+    padding-top: 80px;
+}
+
+.close-menu {
+    margin-bottom: 20px;
+}
+
+.close-img {
+    width: 150px; /* Adjust the size of the back button */
+    height: auto;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+nav ul li {
+    margin: 20px 0;
+    position: relative;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+font-family: 'Satisfy', cursive;
+    font-size: 20px;
+    font-weight: bold;
+    display: block;
+    text-align: center;
+    padding: 14px 20px;
+    background-image: url('ram.jpg');
+    background-size: cover;
+    background-position: center;
+    transition: color 0.3s, transform 0.3s;
+}
+
+nav ul li a::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 50px;
+    z-index: -1;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    color: red;
+    transform: scale(1.1);
+}
+
+nav ul li a:active {
+    color: red;
+}
+
+/* Show burger icon and mobile navigation for small screens */
+@media (max-width: 768px) {
+    .menu-icon {
+        display: flex;
+    }
+
+    .navbar {
+        right: -100%;
+        transition: right 0.3s ease-in-out;
+    }
+
+    .navbar.open {
+        right: 0;
+    }
+}
+
+/* Desktop navigation style */
+@media (min-width: 769px) {
+    .navbar {
+        position: relative;
+        flex-direction: row;
+        justify-content: center;
+        height: auto;
+        background-color: transparent;
+        right: 0;
+        width: auto;
+    }
+
+    .navbar ul {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .navbar ul li {
+        margin: 0 15px;
+    }
+
+    .contact-info, .social-icons {
+        display: flex;
+        align-items: center;
+    }
+
+    .contact-info p {
+        margin-right: 15px;
+    }
+}
+
+/* Ensure that the content doesn't go underneath the fixed header */
+body {
+    padding-top: 80px;
+    font-family: 'Arial', sans-serif;
+}
+.text-box {
+    width: 90%;
+    margin: 50px auto;
+    padding: 40px;
+    background-image: url('brown.jpg'); /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: white;
+    text-shadow: black, 20px;
+    font-size: 18px;
+    line-height: 1.6;
+    text-align: justify; /* Change from left to justify */
+    background-color: rgba(255, 255, 255, 0.9); /* Optional: semi-transparent background for better readability */
+}
+
+
+.text-box p:last-of-type {
+    text-align: justify;
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Art Gallery</title>
+    <link rel="stylesheet" href="style-a.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="six.png" alt="Logo" class="logo-img">
+        </div>
+        <div class="menu-icon" id="menu-icon">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <nav class="navbar" id="navbar">
+            <div class="close-menu" id="close-menu">
+                <img src="two.png" alt="Go Back" class="close-img">
+            </div>
+            <ul>
+                <li><a href="babu.html">Babu</a></li>
+                <li><a href="messages.html">Messages</a></li>
+                <li><a href="photos.html">Photos</a></li>
+                <li><a href="arts.html">Arts</a></li>
+            </ul>
+            <li><a href="index.html"><img src="homee.png" alt="Home" class="home-img"></a></li>
+        </nav>
+    </header>
+    
+    <div class="header-logo">
+        <img src="agal.png" alt="Header Logo" class="header-logo-img">
+    </div>
+
+    <div class="gallery">
+        <img src="arts1.jpg" alt="Photo 1" class="thumbnail" onclick="openModal('arts1.jpg')">
+        <img src="arts2.jpg" alt="Photo 1" class="thumbnail" onclick="openModal('arts2.jpg')">
+        <img src="arts3.jpg" alt="Photo 1" class="thumbnail" onclick="openModal('arts3.jpg')">
+        <img src="arts4.jpg" alt="Photo 1" class="thumbnail" onclick="openModal('arts4.jpg')">
+        <img src="arts5.jpg" alt="Photo 1" class="thumbnail" onclick="openModal('arts5.jpg')">
+        <img src="arts6.jpg" alt="Photo 1" class="thumbnail" onclick="openModal('arts6.jpg')">
+                
+    </div>
+
+    <div id="modal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modal-img">
+        <div id="caption"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
